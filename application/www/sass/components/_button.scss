@@ -1,0 +1,17 @@
+.btn{
+    font-size: 1.6rem;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+input.form-control{
+    font-size: 1.6rem;
+}
+.form-group{
+    select.form-control{
+        padding: 0;
+        height: 50px;
+        font-size: 1.6rem;   
+    }
+}

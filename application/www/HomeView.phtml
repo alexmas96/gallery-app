@@ -1,0 +1,75 @@
+<!-- Message de notification -->
+<?php if ($message): ?>
+    <?php foreach ($message as $msg): ?>
+       
+    <h3 class="text-center flashbag"><?=$msg?></h3>
+    <?php endforeach  ?>
+
+<?php endif?>
+
+<!-- Premiere section de presentation -->
+<section class="section-presentation">
+    <div class="row">
+    <div class="col-md-6  section-presentation-content ">
+        <h2 class="heading-primary">Bienvenue !</h2>
+        <p class="heading-primary--sub">Je vous présente mon travail artistique qui s’articule autour du dessin et de la peinture. </p>
+        <p>Mon travail est intuitif et spontané, je recherche l’harmonie dans les formes, dans la matière, dans les couleurs pour aboutir à une émotion, un ressenti… à une poésie visuelle… la mienne.</p>
+       
+        <p>Je n’ai qu’une envie, progresser dans mon univers artistique afin de donner du rêve à celui qui le regarde et de sublimer la réalité qui m’entoure.</p>
+        <p>Je vous souhaite une agréable visite sur mon site !</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <!-- composition des trois images superposé -->
+        <div class="composition">
+            <img src="<?=$wwwUrl?>/images/composition/img1.JPG" alt="peinture 1" class="composition__photo composition__photo--p1">
+            <img src="<?=$wwwUrl?>/images/composition/img2.jpg" alt="peinture 2" class="composition__photo composition__photo--p2">
+            <img src="<?=$wwwUrl?>/images/composition/img3.jpg" alt="peinture 3" class="composition__photo composition__photo--p3">                   
+        </div>                       
+    </div>
+    </div>
+
+
+</section>
+<!-- section des themes abordés -->
+<section  class="favorite-themes">
+    <h2 class="heading-primary my-5">Mes thèmes abordés</h2>
+    <div class="row my-5">
+        <div class="col-md-3 theme">
+            <p><i class="material-icons theme-icon">local_florist</i></p>
+            <p class="favorite-themes__text">Fleurs</p>
+        </div>
+        <div class="col-md-3 theme">
+        <p class=""><span class="material-icons theme-icon">landscape</span></p>
+        <p class="favorite-themes__text">Paysages</p>
+        </div>
+        <div class="col-md-3 theme ">
+        <p class=""><span class="material-icons theme-icon">portrait</span></p>
+        <p class="favorite-themes__text">Portrait</p>
+        </div>
+        <div class="col-md-3 theme">
+        <p class=""><span class="material-icons theme-icon">location_city</span</p>
+        <p class="favorite-themes__text">Architecture</p>
+        </div>
+
+    </div>
+</section>
+<section id="latestCreations" class=" my-5">
+    <div class="row text-justify">
+        <div class="col-md-6 col-sm-12 p-5 ">
+            <h2 class="heading-primary my-5"> dernière création</h2>
+            
+            <?php foreach($LatestPaint as $key => $paint): ?>
+                <!-- recuperation de la derniere image ajouté au serveur -->
+                <a href="<?=$requestUrl?>/showpaint?id=<?= $paint["Id"] ?>#<?= $paint["Name"] ?>" class="col"><img src="<?=$wwwUrl?>/images/paints/<?= $paint["Photo"]?>" style="width: 80%; height: auto; margin: none;" alt="three-latest-paint"></a>
+            <?php endforeach ?>
+        </div>
+        <div class="col-md-6 col-sm-12 p-5">
+            <h2 class="heading-primary my-5" id="about">Biographie</h2>
+            <p>Je suis née et j’ai grandi à Epinal dans les Vosges. Je découvre très jeune mon goût pour le dessin grâce aux images d’Epinal que j’aime reproduire. Je réalise beaucoup de dessins au crayon, à la gouache et à l’aquarelle. </p>
+            <p>Je découvre la peinture à l’huile dans un petit atelier d’artistes locaux pendant mon séjour de quelques années aux Etats-Unis, et depuis mon retour en France, je continue mon aventure artistique en Provence !</p>
+            <!-- bouton d'acces a la gallerie -->
+            <a href="<?=$requestUrl?>/gallery" class="gallery-btn"><h4 class="heading-primary ">Voir la galerie &rarr;</h4></a>  
+        </div>
+    </div>
+</section>
+

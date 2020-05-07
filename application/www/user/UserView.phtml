@@ -1,0 +1,25 @@
+<form action="<?=$requestUrl?>/user" method="POST">
+<div class="row">
+  <?php if (isset($error)) {echo $error;}?>
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <h3 class="heading-primary m-5">Profile Information</h3>
+    <div class="input m-5">
+      <label for="inputFirstName" class="sr-only">FirstName</label>
+      <input type="text" name="firstname" value="<?=$firstname?>" id="inputFirstName" class="form-control" placeholder="FirstName" required="required">
+    </div>
+    <div class="input m-5">
+      <label for="inputEmail" class="sr-only">Email</label>
+      <input type="email" name="email" value="<?=$email?>"id="inputEmail" class="form-control" placeholder="email@exemple.com" required="required">
+    </div>
+    <div class="input m-5">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" name="password"
+      id="inputPassword" class="form-control" placeholder="Password" required="required">
+    </div>
+  </div>
+  <div class="col-md-12">
+    <button type="submit" class="btn btn-primary m-5">Create account</button>
+  </div>
+
+</div>
+</form>

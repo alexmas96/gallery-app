@@ -1,0 +1,41 @@
+.admin-table-image{
+
+    height:  10rem;
+    width: auto;
+    @include for(phone-only){
+        height:  4rem;
+    }
+}
+.admin-panel{
+    margin-top: 6rem;
+}
+.admin-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+.admin-icon{
+    color:white;
+    &:hover{
+        color: grey;
+    }
+}
+.modal{
+    color: black;
+}
+.newpaintingForm{
+    margin: 5rem;
+}
+.custom-select.custom-select-sm.form-control.form-control-sm{
+    padding: 0;
+    height: 30px;
+    width: 50px;
+    margin: 1rem;
+}
+.login-inputs{
+    input{
+        width: 30rem;
+        margin: 0 auto;
+    }
+}

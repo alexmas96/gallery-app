@@ -1,0 +1,90 @@
+.header {
+  height: 50vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 15vh auto 20vh;
+
+  &__logobox {
+    position: absolute;
+    top: 15rem;
+    left: 15rem;
+  }
+
+  .logo {
+    height: 6rem;
+    padding: 1rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+#profile{
+  // display: none;
+  display: inline;
+  position: absolute;
+  border-radius: 4px;
+  max-width: 900px;
+  padding: 2rem;
+  background-color: white;
+  background-image: linear-gradient(to top right,#000000c7, #191919 );
+  -webkit-box-shadow: 0px 0px 43px -7px rgba(0,0,0,0.78);
+  -moz-box-shadow: 0px 0px 43px -7px rgba(0,0,0,0.78);
+  box-shadow: 0px 0px 43px -7px rgba(0,0,0,0.78);
+  top: 12rem;
+  left: 8rem;
+  @include for(phone-only) {
+    top: 14.5rem;
+  }
+  .title{
+    margin-top: 1.5rem;
+  }
+  .header-social-media{
+    margin: 0 auto;
+    display: flex;
+    i{
+      transition: all .3s ease-in-out;
+      &:hover{
+        opacity: .6;
+      }
+    } 
+  }
+  .profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0;
+    
+    @include for(phone-only) {
+      justify-content: space-around;
+    }
+  }
+  .profile-pict {
+    border-radius: 50%;
+    min-width: 8rem;
+    min-height: 8rem;
+    background-image: url("../images/pm.png");
+    background-size: cover;
+    background-position-x: 1.5rem;
+  }
+  
+  span{
+    margin-left: 4rem;
+    @include for(phone-only) {
+      margin: 0;
+    }
+  }
+}

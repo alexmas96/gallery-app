@@ -1,0 +1,85 @@
+<h1 class="my-5 p-5 heading-primary">Modification de la peinture</h1>
+
+<div class="row my-5 px-5">
+  <div class="col-md-6 u-center-text">
+    <img id="<?=$paint["Photo"]?>" src="<?=$wwwUrl?>/images/paints/<?=$paint["Photo"]?>" style="max-width:60%;" alt="<?=$paint["Photo"]?>">
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 px-5">
+      <h3 class="heading-primary">Information de la peinture</h3>
+      <form action="../update" method="POST">
+      <input type="number" name="Id" value="<?=$paint["Id"]?>" hidden>
+        <div class="input">
+          <label for="inputFirstName" class="">Name</label>
+          <input type="text" name="name" value="<?= $paint["Name"]?>" id="inputFirstName" class="form-control edit-input" placeholder="FirstName" required="required">
+        </div>
+
+        <div class="input">
+          <label for="desc" class="">description</label>
+          <input type="text" name="desc" value="<?=$paint["Description"]?>" id="desc" class="form-control edit-input" placeholder="FirstName" required="required">
+        </div>
+        <div class="row">
+          <div class="input">
+            <label for="width" class="">Largeur</label>
+            <input type="number" name="width" value="<?=$paint["Width"]?>" id="width" class="form-control edit-input">
+          </div>&nbsp;
+          <div class="input">
+            <label for="height" class="">Hauteur</label>
+            <input type="number" name="height" value="<?=$paint["Height"]?>" id="height" class="form-control edit-input">
+          </div>
+        </div>
+
+        <div class="form-group">
+        <label for="category">Technique:</label>
+        <select class="form-control" name="category" id="category">
+        <option value=<?=$paint["Category_Id"]?>><?=$paint["Category_Name"]?></option>
+        <?php foreach ($categories as $key => $category): ?>
+          <option value=<?=$category["Id"]?>><?=$category["Category_Name"]?></option>
+          <?php endforeach?>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="theme">Theme:</label>
+        <select type="number" class="form-control" name="theme" id="theme">
+        <option value=<?=$paint["Theme_Id"]?>><?=$paint["Theme_Name"]?></option>
+        <?php foreach ($themes as $key => $theme): ?>
+          <option value=<?=$theme["Id"]?>><?=$theme["Theme_Name"]?></option>
+          <?php endforeach?>
+        </select>
+      </div>
+      <!--  -->
+      <?php if($paint["Availability"] == true):?>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="availability" id="disponible" value="1" checked>
+          <label class="form-check-label" for="disponible">
+            &nbsp;Disponible
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="availability" id="non-disponible" value="0">
+          <label class="form-check-label" for="non-disponible">
+            &nbsp;Non-Disponible
+          </label>
+        </div>
+            <?php else:?>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="availability" id="disponible" value="1" >
+                <label class="form-check-label" for="disponible">
+                  &nbsp;Disponible
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="availability" id="non-disponible" value="0" checked>
+                <label class="form-check-label" for="non-disponible">
+                  &nbsp;Non-Disponible
+                </label>
+              </div>
+            <?php endif?>
+      
+      <!--  -->
+      <button type="submit" style="float:right;" class="btn btn-primary">Mettre à jour</button>
+      </form>
+  </div>
+</div>
+
+

@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+body{
+    box-sizing: border-box;
+    height: auto;
+    background-repeat: no-repeat;
+}
+a{
+    color: white;
+    text-decoration: none;
+    &:hover{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+img{
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow: 0px 0px 43px -7px rgba(0,0,0,0.78);
+    -moz-box-shadow: 0px 0px 43px -7px rgba(0,0,0,0.78);
+    box-shadow: 0px 0px 43px -7px rgba(0,0,0,0.78);
+}
+.flashbag{
+    text-transform: capitalize;
+    position: absolute;
+    top:50vh;
+    color: limegreen;
+    background-color: rgba(0, 0, 0, 0.616);
+    width: 100%;
+    padding: 1rem;
+    transition: 2s;
+    -moz-animation: flashbagAnimation 4.5s forwards;
+    /* Firefox */
+    -webkit-animation: flashbagAnimation 4.5s forwards;
+    /* Safari and Chrome */
+    -o-animation: flashbagAnimation 4.5s forwards;
+    /* Opera */
+    animation: flashbagAnimation 4.5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}

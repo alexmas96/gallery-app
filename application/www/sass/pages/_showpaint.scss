@@ -1,0 +1,41 @@
+.showpaint{
+    .back-btn{
+        .fa-arrow-left{
+            font-size: 4rem;
+            padding:2rem;
+            margin:2rem;
+            border-radius: 4px;
+            transition: all .3s ease-in;
+            &:hover{
+                color: grey;
+                background-color: black;
+            }
+        }
+    }
+}
+.availability{
+    font-size: 2.5rem;
+}
+.showImage{
+    margin: 0 auto;
+}
+.paintDetail{
+    line-height: 6rem;
+    text-align: center;
+    padding: 2rem;
+
+    font-weight: 700;
+    
+    @include for(phone-only){
+        line-height: 3rem;
+    }
+}
+.share{
+    color: red;
+}
+.social-media-links{
+    margin-top: 5rem;
+    img{
+        width: 3.5rem;
+    }
+}
