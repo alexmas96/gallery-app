@@ -105,19 +105,7 @@ class PaintModel extends AbstractModel
         
         $this->db->executeSql($request, $fields);
     }
-    public function update2($id){
-        $fields = array(
-            $_POST["name"],
-            $_POST["desc"],
-            $_POST["category"],
-            $_POST["theme"],
-        );
-        
-        $request = 'UPDATE paints SET (paints.Name, paints.Description, paints.Category_Id, paints.Theme_Id) VALUES (?,?,?,?)
-        WHERE paints.Id ='.$id;
-        
-        $this->db->executeSql($request, $fields);
-    }
+    
     public function getLastThree(){
         
         $request = 'SELECT * FROM paints ORDER BY ID DESC LIMIT 3';
