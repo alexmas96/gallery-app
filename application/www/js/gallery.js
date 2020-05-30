@@ -40,16 +40,15 @@ class Gallery {
   }
 
 
-  // animation au hover
-  // onAnimatePainting(e) {
-  //   var paint = e.target;
-  //   paint.classList.remove("animated");
-  //   paint.classList.add("scale");
-  //   paint.addEventListener("mouseout", function(){
-  //     paint.classList.remove("scale");
-  //   })
-  //   // paint.css("transform", "scale(1.2)");
-  // }
+  //animation au hover
+  onAnimatePainting(e) {
+    var paint = e.target;
+    paint.classList.remove("animated");
+    paint.classList.add("scale");
+    paint.addEventListener("mouseout", function(){
+      paint.classList.remove("scale");
+    })
+  }
 
 
   // fonctions de callback ajax qui va s'executer si la fonction ajax a été executé avec succés
@@ -73,10 +72,10 @@ class Gallery {
     });
     var painting = document.querySelectorAll(".painting");
     console.log(painting);
-    // // ajout de l'animation pour chaque peinture recupérées
-    // painting.forEach(element => {
-    //   element.addEventListener("mouseover", this.onAnimatePainting.bind(this));
-    // });
+    // ajout de l'animation pour chaque peinture recupérées
+    painting.forEach(element => {
+      element.addEventListener("mouseover", this.onAnimatePainting.bind(this));
+    });
   }
 }
 
