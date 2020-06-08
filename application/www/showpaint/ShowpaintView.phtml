@@ -1,12 +1,12 @@
-<div class="showpaint">
-    <a href="javascript:history.go(-1)"  class="back-btn"><i class="fas fa-arrow-left"></i></a>
+<a href="javascript:history.go(-1)"  class="back-btn"><i class="fas fa-arrow-left"></i></a>
     
-    <div class="showImage row">
-        <div class="col-md-8 col-sm-12 u-center-text" id="<?=$paint["Name"]?>">
+    <section class="showImage row">
+    
+        <article class="col-md-8 col-sm-12 u-center-text" id="<?=$paint["Name"]?>">
             <img src="<?=$wwwUrl?>/images/paints/<?=$paint["Photo"]?>" class="animated fadeInLeft img-fluid paint-view my-5" style="max-height:50vh; width: auto;"  alt="peinture selectioner">
-        </div>
+        </article>
 
-        <div class="paintDetail col-md-4 col-sm-12 my-5">
+        <aside class="paintDetail col-md-4 col-sm-12 my-5">
             <h2 class="heading-primary"><?=$paint["Name"]?></h2>
             <h3><em><q><?=$paint["Description"]?></q></em></h3>
             <p>Format&nbsp;:&nbsp;<?=$paint["Width"]?>x<?=$paint["Height"]?> cm</p>
@@ -18,7 +18,7 @@
                 <p class="availability"><em>Non Disponible</em></p>
             <?php endif?>
             <div class="social-media-links">
-            <h3><i class="fas fa-heart animated infinite heartBeat share"></i>&nbsp; Soutenez mon travail en partageant&nbsp;!</h3>
+                <h3><i class="fas fa-heart animated infinite heartBeat share"></i>&nbsp; Soutenez mon travail en partageant&nbsp;!</h3>
                 <a href="http://www.facebook.com/sharer.php?u=<?=$wwwUrl?>/showpaint?id=<?=$paint["Id"]?>" target="_blank" rel="noopener">
                     <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
                 </a>&nbsp;
@@ -29,7 +29,5 @@
                     <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
                 </a>
             </div>
-            <p></p>
-        </div>
-    </div>
-</div>
+        </aside>
+    </section>

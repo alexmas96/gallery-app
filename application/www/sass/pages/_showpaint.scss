@@ -1,15 +1,13 @@
-.showpaint{
-    .back-btn{
-        .fa-arrow-left{
-            font-size: 4rem;
-            padding:2rem;
-            margin:2rem;
-            border-radius: 4px;
-            transition: all .3s ease-in;
-            &:hover{
-                color: grey;
-                background-color: black;
-            }
+.back-btn{
+    .fa-arrow-left{
+        font-size: 4rem;
+        padding:2rem;
+        margin:2rem;
+        border-radius: 4px;
+        transition: all .3s ease-in;
+        &:hover{
+            color: grey;
+            background-color: black;
         }
     }
 }

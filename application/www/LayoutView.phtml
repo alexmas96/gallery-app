@@ -60,9 +60,9 @@
 
 <!-- Barre de navigation -->
 <nav class="user-interface" id="user-interface">
-<a href="<?=$requestUrl?>#header"><div class="logo">
+    <a href="<?=$requestUrl?>#header">
             <h1 class="title">Patricia Masuy Art</h1>
-        </div></a>
+        </a>
     <ul class="link-list" >
         <!-- Liens vers les differente pages du site -->
 
@@ -77,7 +77,7 @@
     </ul>
 </nav>
 <!-- Navigation pour mobile -->
-<div class="mobile-nav" id="mobile-nav">
+<nav class="mobile-nav" id="mobile-nav">
             <input type="checkbox" id="nav-toggle" class="mobile-nav__checkbox">
             <label for="nav-toggle" class="mobile-nav__btn"><i class="fas fa-bars mobile-nav__icon"></i></label>
             <div class="mobile-nav__background">&nbsp;</div>
@@ -91,27 +91,24 @@
                     <?php endif?>
                 </ul>
             </div>
-        </div>
+    </nav>
 
 
 <!-- En-tête commune -->
 
 <header class="header" id="header" style="background-image: linear-gradient(to top right,#ff0000a2, #fffb009c )  ,url('<?=$wwwUrl?>/images/bg2.jpg');">
-        <div id="profile" class="header__profile">
-        <span class="profile">
-            <div class="profile-pict">
-               <br>
-            </div>
-            <span class=" mx-5"><h4>patricia masuy</h4>
-            <p>Artiste Independante</p></span> 
-        </span>
-        <br>
-        <ul class="socialMedia-icons header-social-media">
-                <li><a href="https://www.facebook.com/patricia.masuy.73" target="_blank" rel="noopener" alt="myFacebookPage" ><i class="fab fa-facebook-square social-icon"></i></a></li>
-                <li><a href="https://www.instagram.com/patricia_masuy_art/" target="_blank"rel="noopener" alt="myInstagramPage"><i class="fab fa-instagram social-icon"></i></a></li>
-                <li><a href="#" rel="noopener" alt="myPrinterestPage"><i class="fab fa-pinterest-square social-icon"></i></a></li>
-            </ul>
+    <div id="profile" class="header__profile text-center">
+        <div class="profile">
+            <div class="profile-pict">&nbsp;</div>
         </div>
+        <h4>patricia masuy</h4>
+        <p>Artiste Independante</p>
+        <ul class="socialMedia-icons header-social-media">
+            <li><a href="https://www.facebook.com/patricia.masuy.73" target="_blank" rel="noopener" alt="myFacebookPage" ><i class="fab fa-facebook-square social-icon"></i></a></li>
+            <li><a href="https://www.instagram.com/patricia_masuy_art/" target="_blank"rel="noopener" alt="myInstagramPage"><i class="fab fa-instagram social-icon"></i></a></li>
+            <li><a href="#" rel="noopener" alt="myPrinterestPage"><i class="fab fa-pinterest-square social-icon"></i></a></li>
+        </ul>
+    </div>
 </header>
 
 
@@ -134,7 +131,7 @@
 
 
 <!-- Pied de page commun -->
-<footer >
+<footer>
     <div class="footer">
         <ul>
             <li><h3 class="footer-title">Contactez moi:</h3></li>

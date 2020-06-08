@@ -1,6 +1,6 @@
 <h2 class="heading-primary my-4 p-4">Nouvelle peinture</h2>
 <form action="<?=$requestUrl?>/upload" method="POST" enctype="multipart/form-data">
-<div class="row newpaintingForm" style="height: 100%">
+<section class="row newpaintingForm" style="height: 100%">
     <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="input">
         <label for="name" >Name</label>
@@ -54,9 +54,7 @@
     <input type="file" class="form-control-file" name="fileToUpload" id="fileToUpload">
     <div class="uploadForm" id="uploadForm"></div>
   </div>
-  
-  
-</div>
+</section>
 <div class="col-md-2 text-center">
       <button class="btn btn-success" type="submit">Upload</button>
   </div>

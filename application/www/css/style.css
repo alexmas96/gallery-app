@@ -270,7 +270,9 @@ input.form-control {
       #profile .profile {
         justify-content: space-around; } }
   #profile .profile-pict {
-    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 100%;
     min-width: 8rem;
     min-height: 8rem;
     background-image: url("../images/pm.png");
@@ -442,11 +444,12 @@ main {
   width: 30rem;
   margin: 0 auto; }
 
-section {
+section.home {
   margin: 2rem;
   margin-bottom: 8rem;
+  margin-top: 8rem;
   height: auto; }
-  section p {
+  section.home p {
     font-size: 1.8rem;
     text-align: justify;
     margin-bottom: 4rem;
@@ -570,13 +573,13 @@ section {
   -moz-box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.78);
   box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.78); }
 
-.showpaint .back-btn .fa-arrow-left {
+.back-btn .fa-arrow-left {
   font-size: 4rem;
   padding: 2rem;
   margin: 2rem;
   border-radius: 4px;
   transition: all .3s ease-in; }
-  .showpaint .back-btn .fa-arrow-left:hover {
+  .back-btn .fa-arrow-left:hover {
     color: grey;
     background-color: black; }
 

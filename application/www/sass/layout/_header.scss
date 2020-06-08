@@ -73,7 +73,9 @@
     }
   }
   .profile-pict {
-    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 100%;
     min-width: 8rem;
     min-height: 8rem;
     background-image: url("../images/pm.png");

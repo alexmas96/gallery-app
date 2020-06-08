@@ -1,9 +1,9 @@
 <h2 class="gallery-heading heading-primary">Galerie</h2>
 <section class="gallery">
-    <div class="gallery__techniques" id="btns">
+    <section class="gallery__techniques" id="btns">
 
     <!-- BOUTONS AFFICHER TOUTE LES PEINTURES, DEFAULT AU CHARGEMENT DE LA PAGE -->
-    <a data-category="0" class="gallery__techniques-item">toutes</a>
+        <a data-category="0" class="gallery__techniques-item">toutes</a>
 
         <div class="cat">
         <!-- BOUTONS AFFICHER PAR CATEGORIES -->
@@ -18,10 +18,10 @@
             <a class="gallery__techniques-item" data-theme="<?=$theme["Id"]?>" data-name="theme"><?=$theme["Theme_Name"]?></a>
         <?php endforeach?>
         </div>
-    </div>
+    </section>
 
     <!-- CONTAINNER DES PEINTURES, REMPLI DYNAMIQUEMENT EN AJAX  -->
-    <div class="gallery__pictures" id="byCategory"></div>
+    <section class="gallery__pictures" id="byCategory"></section>
 
 </section>
 <script src="<?=$wwwUrl?>/js/utilities.js"></script>

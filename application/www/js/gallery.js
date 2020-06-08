@@ -48,6 +48,7 @@ class Gallery {
     paint.addEventListener("mouseout", function(){
       paint.classList.remove("scale");
     })
+    // paint.css("transform", "scale(1.2)");
   }
 
 
@@ -57,7 +58,7 @@ class Gallery {
     console.log(paintsByCategory.results);
 
     $.each(paintsByCategory, function(index, paint) {
-      let paintContainer = $("<div class='text-center' style='display:flex; flex-direction: row; justify-content: space-around'>");
+      let paintContainer = $("<article class='text-center' style='display:flex; flex-direction: row; justify-content: space-around'>");
       if (paint.Name !== null) {
         paintContainer.append(
           `<a href="${getRequestUrl()}/showpaint?id=${paint.Id}#${
