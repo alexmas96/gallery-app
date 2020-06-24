@@ -66,13 +66,13 @@
     <ul class="link-list" >
         <!-- Liens vers les differente pages du site -->
 
-        <li><a href="<?=$requestUrl?>#header" alt="home"><i class="fas fa-home"></i>&nbsp; Accueil</a></li>
-        <li><a href="<?=$requestUrl?>#latestCreations" alt="about"><i class="fa fa-user"></i>&nbsp; Biographie</a></li>
-        <li><a href="<?=$requestUrl?>/gallery" alt="gallery"><i class="fas fa-images"></i>&nbsp; Galerie</a></li>
+        <li><a href="<?=$requestUrl?>#header" rel="home"><i class="fas fa-home"></i>&nbsp; Accueil</a></li>
+        <li><a href="<?=$requestUrl?>#latestCreations" rel="about"><i class="fa fa-user"></i>&nbsp; Biographie</a></li>
+        <li><a href="<?=$requestUrl?>/gallery" rel="gallery"><i class="fas fa-images"></i>&nbsp; Galerie</a></li>
 
             <?php if ($userSession->isAdmin()): ?>
                 <!-- bouton de deconnexion -->
-                <li><a href="<?=$requestUrl?>/user/logout" alt="logout"><i class="fa fa-sign-out-alt"></i>&nbsp; Deconnexion</a></li>
+                <li><a href="<?=$requestUrl?>/user/logout" rel="logout"><i class="fa fa-sign-out-alt"></i>&nbsp; Deconnexion</a></li>
             <?php endif?>
     </ul>
 </nav>
@@ -104,9 +104,9 @@
         <h4>patricia masuy</h4>
         <p>Artiste Independante</p>
         <ul class="socialMedia-icons header-social-media">
-            <li><a href="https://www.facebook.com/patricia.masuy.73" target="_blank" rel="noopener" alt="myFacebookPage" ><i class="fab fa-facebook-square social-icon"></i></a></li>
-            <li><a href="https://www.instagram.com/patricia_masuy_art/" target="_blank"rel="noopener" alt="myInstagramPage"><i class="fab fa-instagram social-icon"></i></a></li>
-            <li><a href="#" rel="noopener" alt="myPrinterestPage"><i class="fab fa-pinterest-square social-icon"></i></a></li>
+            <li><a href="https://www.facebook.com/patricia.masuy.73" target="_blank" rel="noopener"><i class="fab fa-facebook-square social-icon"></i></a></li>
+            <li><a href="https://www.instagram.com/patricia_masuy_art/" target="_blank" rel="noopener"><i class="fab fa-instagram social-icon"></i></a></li>
+            <li><a href="#" rel="noopener"><i class="fab fa-pinterest-square social-icon"></i></a></li>
         </ul>
     </div>
 </header>
@@ -117,7 +117,7 @@
 <?php if ($userSession->isAdmin() && strpos($_SERVER['REQUEST_URI'], "admin") == false): ?>
 
     <!-- Bouton d'acces au panel admin -->
-    <a href="<?=$requestUrl?>/admin" style="z-index: 1000;  width: 80px; height: 80px; right:1.5rem; bottom: 1.5rem;" alt="adminButton"><i class="fas fa-th admin-icon" style="z-index: 1000; position:fixed; font-size: 40px; right:1.5rem; bottom:1.5rem;  "></i></a>
+    <a href="<?=$requestUrl?>/admin" style="z-index: 1000;  width: 80px; height: 80px; right:1.5rem; bottom: 1.5rem;" rel="adminButton"><i class="fas fa-th admin-icon" style="z-index: 1000; position:fixed; font-size: 40px; right:1.5rem; bottom:1.5rem;  "></i></a>
 <?php endif?>
 
 
@@ -142,9 +142,9 @@
         <div class="socialMedia">
             <h3 class="footer-title">Suivez moi sur:</h3>
             <ul class="socialMedia-icons">
-                <li><a href="https://www.facebook.com/patricia.masuy.73" target="_blank" rel="noopener" alt="myFacebookPage"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="https://www.instagram.com/patricia_masuy_art/" target="_blank"rel="noopener" alt="myInstagramPage"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#" rel="noopener" alt="myPrinterestPage"><i class="fab fa-pinterest-square"></i></a></li>
+                <li><a href="https://www.facebook.com/patricia.masuy.73" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://www.instagram.com/patricia_masuy_art/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" rel="noopener"><i class="fab fa-pinterest-square"></i></a></li>
             </ul>
         </div>
     </div>
@@ -173,7 +173,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <a href="<?=$requestUrl?>/remove?id=" id="removePaintBtn"class="btn btn-primary" >oui</a>
+                                <a href="<?=$requestUrl?>/remove?id=" id="removePaintBtn" class="btn btn-primary">oui</a>
                                 <button class="btn btn-danger" data-dismiss="modal">annuler</button>
                             </div>
                         </div>

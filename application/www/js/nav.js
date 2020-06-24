@@ -6,7 +6,7 @@ function navbarDiplay() {
     window.addEventListener('scroll', function(){
     // detects new state and compares it with the new one
     if ((document.body.getBoundingClientRect()).top > scrollPos || (document.body.getBoundingClientRect()).top > -150){
-            
+        
             
             if(document.querySelector('.admin-icon')){
                 document.querySelector('.admin-icon').style.bottom = "1.5rem";

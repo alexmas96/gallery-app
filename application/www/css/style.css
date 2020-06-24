@@ -31,6 +31,18 @@ body {
   height: auto;
   background-repeat: no-repeat; }
 
+body::-webkit-scrollbar {
+  display: block;
+  width: .5rem; }
+
+body::-webkit-scrollbar-track {
+  background: inherit; }
+
+body::-webkit-scrollbar-thumb {
+  background: #858585;
+  border-radius: 25px;
+  width: .6rem; }
+
 a {
   color: white;
   text-decoration: none; }

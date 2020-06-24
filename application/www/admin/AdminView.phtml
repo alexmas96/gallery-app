@@ -1,3 +1,25 @@
+<!-- Table styles -->
+<style>
+DIV.table 
+{
+    display:table;
+    padding: 20px;
+}
+FORM.tr, DIV.tr
+{
+    display:table-row;
+    height: 45px;
+}
+
+SPAN.td
+{
+    display:table-cell;
+}
+SPAN.td:nth-child(-n+3) {
+  padding-right:20px;
+}
+</style>
+
 <!-- flashbag message -->
 <?php if ($message): ?>
 
@@ -9,93 +31,66 @@
 <section class="admin-panel">
 <h2 class="heading-primary mx-5">Panel Admin</h2>
     <div class="admin-header  my-5">
-            <div></div>
+            <h3>Modification</h3>
             <a type="button"  href="<?=$requestUrl?>/admin/addPaint" id="addPaintBtn" class="btn btn-success "><i class="fas fa-plus"></i>&nbsp;Ajouter une peinture</a>
         </div>
     <div class="row">
 
         <!-- TABLEAU DES CATEGORIES -->
         <div class="col-md-6">
-        <table class="table table-dark table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Techniques</th>
-                    </tr>                    
-                </thead>
-                <tbody>
-                <?php foreach ($categories as $key => $categorie): ?>
-                    <tr>
-                        <form action="<?=$requestUrl?>/adminedits" method="POST">
-                        <td><?=$key+1?><input type="number" name="id" value="<?=$categorie['Id']?>" hidden></td>
-                        <td>
-                        <div class="input">
-                            <input type="text" name="category" value="<?=$categorie['Category_Name']?>" class="form-control edit-input" placeholder="FirstName">
-                        </div>
-                        </td>
-                        <td><input class="btn btn-primary" type="submit" name="editCategory" value="Modifier" style="width: 50%"></td>
-                        <td><input class="btn btn-danger" type="submit" name="removeCategory" value="Effacer" style="width: 50%"></td>
-                        </form>
-
-                    </tr>
-                    <?php endforeach?>
-                    <tr>
-                        <form action="<?=$requestUrl?>/adminedits" method="POST">
-                        <td><?= count($categories)+1 ?></td>
-                        <td>
-                        <div class="input">
-                            <input type="text" name="newCategory" value="" class="form-control edit-input" placeholder="Ajouter une technique" required>
-                        </div>
-                        </td>
-                        <td></td>
-                        
-                        <td><button type="submit" class="btn btn-success">Ajouter</button></td>
-                        </form>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="table table-dark table-hover">
+            <div class="tr">
+                <span class="td">#</span>
+                <span class="td">Technique</span>
+                <span class="td">Modifier</span>
+                <span class="td">Supprimer</span>
+            </div>
+            <?php foreach ($categories as $key => $categorie): ?>
+            <form class="tr" method="post" action="<?=$requestUrl?>/adminedits">
+                <span class="td"><?=$key+1?><input type="number" name="id" value="<?=$categorie['Id']?>" hidden></span>
+                <span class="td">
+                <input type="text" name="category" value="<?=$categorie['Category_Name']?>" class="form-control edit-input" placeholder="FirstName">
+                </span>
+                <span class="td"><input class="btn btn-primary" style="padding:5px 15px;" type="submit" name="editCategory" value="Modifier"></span>
+                <span class="td"><input class="btn btn-danger" style="padding:5px 15px;" type="submit" name="removeCategory" value="Effacer"></span>
+            </form>
+            <?php endforeach?>
+            <form class="tr" action="<?=$requestUrl?>/adminedits" method="POST">
+                <span class="td"><?= count($categories)+1 ?></span>
+                <span class="td">
+                <input type="text" name="newCategory" class="form-control edit-input" placeholder="Ajouter une technique" required>
+                </span>
+                <button type="submit" class="btn btn-success">Ajouter</button>
+            </form>
+        </div>
         </div>
         <div class="col-md-6">
-
         <!-- TABLEAU DES THEMES -->
-        <table class="table table-dark table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Themes</th>
-                    </tr>                    
-                </thead>
-                <tbody>
-                    <?php foreach ($themes as $key => $theme): ?>
-                    <tr>
-                        <form action="<?=$requestUrl?>/adminedits" method="POST">
-                        <td><?=$key+1?><input type="number" name="id" value="<?=$theme['Id']?>" hidden></td>
-                        <td>
-                        <div class="input">
-                            <input type="text" name="theme" value="<?=$theme['Theme_Name']?>" class="form-control edit-input" placeholder="FirstName">
-                        </div>
-                        </td>
-                        <td><input class="btn btn-primary" type="submit" name="editTheme" value="Modifier" style="width: 50%"></td>
-                        <td><input class="btn btn-danger" type="submit" name="removeTheme" value="Effacer" style="width: 50%"></td>
-                        </form>
-
-                    </tr>
-                    <?php endforeach?>
-                    <tr>
-                        <form action="<?=$requestUrl?>/adminedits" method="POST">
-                        <td><?= count($themes)+1 ?></td>
-                        <td>
-                        <div class="input">
-                            <input type="text" name="newTheme" value="" class="form-control edit-input" placeholder="Ajouter un theme" required>
-                        </div>
-                        </td>
-                        <td></td>
-                        
-                        <td><button type="submit" class="btn btn-success">Ajouter</button></td>
-                        </form>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="table table-dark table-hover">
+            <div class="tr">
+                <span class="td">#</span>
+                <span class="td">Technique</span>
+                <span class="td">Modifier</span>
+                <span class="td">Supprimer</span>
+            </div>
+            <?php foreach ($themes as $key => $theme): ?>
+            <form class="tr" method="post" action="<?=$requestUrl?>/adminedits">
+                <span class="td"><?=$key+1?><input type="number" name="id" value="<?=$theme['Id']?>" hidden></span>
+                <span class="td">
+                <input type="text" name="theme" value="<?=$theme['Theme_Name']?>" class="form-control edit-input">
+                </span>
+                <span class="td"><input class="btn btn-primary" type="submit" name="editTheme" value="Modifier" style="width: 50%"></span>
+                <span class="td"><input class="btn btn-danger" type="submit" name="removeTheme" value="Effacer" style="width: 50%"></span>
+            </form>
+            <?php endforeach?>
+            <form class="tr" action="<?=$requestUrl?>/adminedits" method="POST">
+                <span class="td"><?= count($themes)+1 ?></span>
+                <span class="td">
+                <input type="text" name="newTheme" class="form-control edit-input" placeholder="Ajouter un theme" required>
+                </span>
+                <button type="submit" class="btn btn-success">Ajouter</button>
+            </form>
+        </div>           
         </div>
     </div>
 
@@ -121,10 +116,10 @@
                     <td><?=$paint['Id']?></td>
                     <td><?=$paint['Name']?></td>
                     <td><?=$paint['Description']?></td>
-                    <?php if ($paint['Photo']): ?>
+                    <?php if($paint['Photo']): ?>
                     <td><img src="<?=$wwwUrl?>/images/paints/<?=$paint['Photo']?>" class="admin-table-image" alt="peinture"></td>
                     <?php else: ?>
-                        <td><form action=""><input type="file"><button class="btn btn-primary"type="submit">Ajouter</button></form></td>
+                        <td>pas d'image</td>
                     <?php endif?>
                     <td><?=$paint['Width']?>x<?=$paint['Height']?> cm</td>
                     <td><?=$paint['Category_Name']?></td>

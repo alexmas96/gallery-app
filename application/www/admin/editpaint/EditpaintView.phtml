@@ -9,22 +9,22 @@
       <form action="../update" method="POST">
       <input type="number" name="Id" value="<?=$paint["Id"]?>" hidden>
         <div class="input">
-          <label for="inputFirstName" class="">Name</label>
-          <input type="text" name="name" value="<?= $paint["Name"]?>" id="inputFirstName" class="form-control edit-input" placeholder="FirstName" required="required">
+          <label for="paintName">Name</label>
+          <input type="text" name="name" id="paintName"  value="<?= $paint["Name"]?>" class="form-control edit-input" placeholder="FirstName" required="required">
         </div>
 
         <div class="input">
-          <label for="desc" class="">description</label>
-          <input type="text" name="desc" value="<?=$paint["Description"]?>" id="desc" class="form-control edit-input" placeholder="FirstName" required="required">
+          <label for="desc">description</label>
+          <input type="text" name="desc" id="desc" value="<?=$paint["Description"]?>" class="form-control edit-input" placeholder="FirstName" required="required">
         </div>
         <div class="row">
           <div class="input">
-            <label for="width" class="">Largeur</label>
-            <input type="number" name="width" value="<?=$paint["Width"]?>" id="width" class="form-control edit-input">
+            <label for="width">Largeur</label>
+            <input type="number" id="width" name="width" value="<?=$paint["Width"]?>"  class="form-control edit-input">
           </div>&nbsp;
           <div class="input">
-            <label for="height" class="">Hauteur</label>
-            <input type="number" name="height" value="<?=$paint["Height"]?>" id="height" class="form-control edit-input">
+            <label for="height">Hauteur</label>
+            <input type="number" id="height" name="height" value="<?=$paint["Height"]?>"  class="form-control edit-input">
           </div>
         </div>
 
@@ -40,7 +40,7 @@
 
       <div class="form-group">
         <label for="theme">Theme:</label>
-        <select type="number" class="form-control" name="theme" id="theme">
+        <select class="form-control" name="theme" id="theme">
         <option value=<?=$paint["Theme_Id"]?>><?=$paint["Theme_Name"]?></option>
         <?php foreach ($themes as $key => $theme): ?>
           <option value=<?=$theme["Id"]?>><?=$theme["Theme_Name"]?></option>
@@ -56,8 +56,8 @@
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="availability" id="non-disponible" value="0">
-          <label class="form-check-label" for="non-disponible">
+          <input class="form-check-input" type="radio" name="availability" id="nonDisponible" value="0">
+          <label class="form-check-label" for="nonDisponible">
             &nbsp;Non-Disponible
           </label>
         </div>
@@ -69,8 +69,8 @@
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="availability" id="non-disponible" value="0" checked>
-                <label class="form-check-label" for="non-disponible">
+                <input class="form-check-input" type="radio" name="availability" id="nonDisponible" value="0" checked>
+                <label class="form-check-label" for="nonDisponible">
                   &nbsp;Non-Disponible
                 </label>
               </div>
