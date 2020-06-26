@@ -17,15 +17,18 @@
             <?php else:?>
                 <p class="availability"><em>Non Disponible</em></p>
             <?php endif?>
+            <?php if($paint["Availability"] == true):?>
+                <a href="mailto:patou.masuy@gmail.com?subject=Commande:%20<?=$paint["Name"]?>&amp;Body=Bonjour,%0D%0A%0D%0AJe%20suis%20intéressé%20par%20la%20peinture%20%E2%80%9C<?=$paint["Name"]?>%E2%80%9D%0D%0A%0D%0AListé%20sur%20la%20page:%20https://www.patriciamasuy.art/index.php/showpaint?id=<?=$paint["Id"]?>%0D%0A%0D%0ACordialement,%0D%0A%0D%0A" class="buy-btn">Reserver</a>
+            <?php endif?>
             <div class="social-media-links">
                 <h3><i class="fas fa-heart animated infinite heartBeat share"></i>&nbsp; Soutenez mon travail en partageant&nbsp;!</h3>
-                <a href="http://www.facebook.com/sharer.php?u=<?=$wwwUrl?>/showpaint?id=<?=$paint["Id"]?>" target="_blank" rel="noopener">
+                <a href="http://www.facebook.com/sharer.php?u=https://www.patriciamasuy.art/index.php/showpaint?id=<?=$paint["Id"]?>" target="_blank" rel="noopener">
                     <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
                 </a>&nbsp;
-                <a href="http://pinterest.com/pin/create/button/?url=<?=$wwwUrl?>/showpaint?id=<?=$paint["Id"]?>&description=<?=$paint["Name"]?>" rel="noopener">
+                <a href="http://pinterest.com/pin/create/button/?url=https://www.patriciamasuy.art/index.php/showpaint?id=<?=$paint["Id"]?>&description=<?=$paint["Name"]?>" rel="noopener">
                     <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
                 </a>&nbsp;
-                <a href="mailto:?&amp;Body=<?=$wwwUrl?>/showpaint?id=<?=$paint["Id"]?>" rel="noopener">
+                <a href="mailto:?&amp;Body=https://www.patriciamasuy.art/index.php/showpaint?id=<?=$paint["Id"]?>" rel="noopener">
                     <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
                 </a>
             </div>

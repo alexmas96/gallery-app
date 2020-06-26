@@ -170,6 +170,25 @@ input.form-control {
   height: 50px;
   font-size: 1.6rem; }
 
+.buy-btn {
+  border: solid orangered 3px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 8px;
+  transition: all .2s;
+  position: relative;
+  display: block;
+  letter-spacing: 2px; }
+  .buy-btn:hover {
+    background: orangered;
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0px 6px 30px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 6px 30px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 6px 30px -5px rgba(0, 0, 0, 0.75); }
+  .buy-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
 .composition {
   position: relative; }
   @media (max-width: 900px) {
