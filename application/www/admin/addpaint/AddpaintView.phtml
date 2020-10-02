@@ -1,7 +1,7 @@
-<section class="row newpaintingForm" style="height: 100%">
 <h2 class="heading-primary my-4 p-4">Nouvelle peinture</h2>
-<form action="<?=$requestUrl?>/upload" method="POST" enctype="multipart/form-data">
-    <div class="col-lg-6 col-md-6 col-sm-12">
+<section class="row newpaintingForm" >
+<form action="<?=$requestUrl?>/upload" method="POST" class="d-flex justify-content-around w-100" enctype="multipart/form-data">
+    <div class="col-md-4 col-sm-12">
         <div class="input">
         <label for="name" >Name</label>
         <input type="text" name="name" id="name" class="form-control" placeholder="nom de l'image" required="required">
@@ -16,7 +16,7 @@
         <select class="form-control" name="category" id="category">
         <option value="">Chosissez...</option>
         <?php foreach ($categories as $key => $category): ?>
-        <option value="<?=$category["id"]?>"><?=$category["Category_Name"]?></option>
+        <option value="<?=$category["Id"]?>"><?=$category["Category_Name"]?></option>
         <?php endforeach?>
         </select>
     </div>
@@ -30,7 +30,7 @@
         </select>
     </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
+    <div class="col-md-4 col-sm-12">
     <div class="input">
         <label for="hauteur">Hauteur (cm)</label>
         <input type="number" name="height" id="hauteur" class="form-control" placeholder="hauteur (cm)" required="required">

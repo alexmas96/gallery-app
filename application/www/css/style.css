@@ -110,7 +110,6 @@ input {
 
 .heading-primary {
   font-size: 3.5rem;
-  margin: 0 auto;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -188,6 +187,18 @@ input.form-control {
   .buy-btn:active {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.lang-select {
+  background-color: inherit;
+  color: white;
+  outline: none;
+  border: none; }
+  .lang-select option {
+    background: black; }
+
+.google_translate_element {
+  background-color: inherit;
+  color: white; }
 
 .composition {
   position: relative; }

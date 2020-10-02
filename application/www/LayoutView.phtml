@@ -69,7 +69,8 @@
         <li><a href="<?=$requestUrl?>#header" rel="home"><i class="fas fa-home"></i>&nbsp; Accueil</a></li>
         <li><a href="<?=$requestUrl?>#latestCreations" rel="about"><i class="fa fa-user"></i>&nbsp; Biographie</a></li>
         <li><a href="<?=$requestUrl?>/gallery" rel="gallery"><i class="fas fa-images"></i>&nbsp; Galerie</a></li>
-
+        <li></li>
+       
             <?php if ($userSession->isAdmin()): ?>
                 <!-- bouton de deconnexion -->
                 <li><a href="<?=$requestUrl?>/user/logout" rel="logout"><i class="fa fa-sign-out-alt"></i>&nbsp; Deconnexion</a></li>
@@ -183,6 +184,7 @@
 
 
 <!-- Code principal JavaScript de l'application -->
+
 
 <script src="<?=$wwwUrl?>/js/utilities.js"></script>
 <script src="<?=$wwwUrl?>/js/bootstrap.min.js"></script>
