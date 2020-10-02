@@ -49,33 +49,19 @@
         </select>
       </div>
       <!--  -->
-      <?php if($paint["Availability"] == true):?>
+      
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="availability" id="disponible" value="1" checked>
+          <input class="form-check-input" type="radio" name="availability" id="disponible" value="1" <?php if($paint["Availability"] == true):?>checked <?php else:?> unchecked <?php endif?>>
           <label class="form-check-label" for="disponible">
             &nbsp;Disponible
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="availability" id="nonDisponible" value="0">
+          <input class="form-check-input" type="radio" name="availability" id="nonDisponible" value="0" <?php if($paint["Availability"] == false):?>checked <?php else:?> unchecked <?php endif?>>
           <label class="form-check-label" for="nonDisponible">
             &nbsp;Non-Disponible
           </label>
         </div>
-            <?php else:?>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="availability" id="disponible" value="1" >
-                <label class="form-check-label" for="disponible">
-                  &nbsp;Disponible
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="availability" id="nonDisponible" value="0" checked>
-                <label class="form-check-label" for="nonDisponible">
-                  &nbsp;Non-Disponible
-                </label>
-              </div>
-            <?php endif?>
       
       <!--  -->
       <button type="submit" style="float:right;" class="btn btn-primary">Mettre à jour</button>
