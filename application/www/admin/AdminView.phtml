@@ -28,10 +28,10 @@ SPAN.td:nth-child(-n+3) {
 <?php endif?>
 
 <!-- admin pannel -->
-<section class="admin-panel">
-<h2 class="heading-primary mx-5">Panel Admin</h2>
+<section class="admin-panel p-4">
+<h2 class="heading-primary mx-3">Panel Admin</h2>
     <div class="admin-header  my-5">
-            <h3>Modification</h3>
+            <h3 class="h2">Gestion des peintures</h3>
             <a type="button"  href="<?=$requestUrl?>/admin/addPaint" id="addPaintBtn" class="btn btn-success "><i class="fas fa-plus"></i>&nbsp;Ajouter une peinture</a>
         </div>
     <div class="row">
@@ -51,8 +51,8 @@ SPAN.td:nth-child(-n+3) {
                 <span class="td">
                 <input type="text" name="category" value="<?=$categorie['Category_Name']?>" class="form-control edit-input" placeholder="FirstName">
                 </span>
-                <span class="td"><input class="btn btn-primary" style="padding:5px 15px;" type="submit" name="editCategory" value="Modifier"></span>
-                <span class="td"><input class="btn btn-danger" style="padding:5px 15px;" type="submit" name="removeCategory" value="Effacer"></span>
+                <span class="td"><input class="btn btn-primary px-3 py-1"  type="submit" name="editCategory" value="Modifier"></span>
+                <span class="td"><input class="btn btn-danger px-3 py-1"  type="submit" name="removeCategory" value="Effacer"></span>
             </form>
             <?php endforeach?>
             <form class="tr" action="<?=$requestUrl?>/adminedits" method="POST">
@@ -79,8 +79,8 @@ SPAN.td:nth-child(-n+3) {
                 <span class="td">
                 <input type="text" name="theme" value="<?=$theme['Theme_Name']?>" class="form-control edit-input">
                 </span>
-                <span class="td"><input class="btn btn-primary" type="submit" name="editTheme" value="Modifier" style="width: 50%"></span>
-                <span class="td"><input class="btn btn-danger" type="submit" name="removeTheme" value="Effacer" style="width: 50%"></span>
+                <span class="td"><input class="btn btn-primary px-3 py-1" type="submit" name="editTheme" value="Modifier"></span>
+                <span class="td"><input class="btn btn-danger px-3 py-1" type="submit" name="removeTheme" value="Effacer" ></span>
             </form>
             <?php endforeach?>
             <form class="tr" action="<?=$requestUrl?>/adminedits" method="POST">
@@ -96,7 +96,7 @@ SPAN.td:nth-child(-n+3) {
 
     <!-- TABLEAU DES PEINTURE -->
     <div class="display responsive ">
-        <table class="table table-dark table-hover" style="width:100%" id="datatable">
+        <table class="table table-dark table-hover w-100"  id="datatable">
         <thead>
             <tr>
             <th scope="col" >#</th>

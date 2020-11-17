@@ -16,14 +16,14 @@ class CategoryModel extends AbstractModel
     {
         $request = 'UPDATE category SET Category_Name=? WHERE category.Id = ?';
         
-        return $this->db->executeSql($request, [$name, $id]);
+        return $this->db->executeSql($request, [filter_var($name, FILTER_SANITIZE_STRING), $id]);
     }
     // ajoute une nouvelle categorie
     public function add($name)
     {
         $request = 'INSERT INTO category (Category_Name) VALUES (?)';
         
-        return $this->db->executeSql($request, [$name]);
+        return $this->db->executeSql($request, [filter_var($name, FILTER_SANITIZE_STRING)]);
     }
     //supprime le nom d'une categorie a un id donné
     public function removeById($id)

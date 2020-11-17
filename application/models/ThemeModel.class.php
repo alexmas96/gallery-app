@@ -15,14 +15,14 @@ class ThemeModel extends AbstractModel
     {
         $request = 'UPDATE theme SET Theme_Name=? WHERE theme.Id = ?';
         
-        return $this->db->executeSql($request, [$name, $id]);
+        return $this->db->executeSql($request, [filter_var($name, FILTER_SANITIZE_STRING), $id]);
     }
     // ajoute un nouveau theme
     public function add($name)
     {
         $request = 'INSERT INTO theme (Theme_Name) VALUES (?)';
         
-        return $this->db->executeSql($request, [$name]);
+        return $this->db->executeSql($request, [filter_var($name, FILTER_SANITIZE_STRING)]);
     }
     //supprime le nom d'un theme a un id donné
     public function removeById($id)

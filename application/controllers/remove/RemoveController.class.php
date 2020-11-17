@@ -16,18 +16,20 @@ class RemoveController
 
             // Si le fichier existe, supprime le, puis supprime les donnés correspondante dans la bdd
             if (file_exists($target_file)) {
-                if(unlink($target_file)){
+                if(unlink($target_file)) {
                     $paints->removePaintById($id);
                     $flashBag->add($paint["Name"]." à était supprimé");
                     $http->redirectTo("/admin");
-                }else{
+                } else {
                     $http->redirectTo("/admin");
                 }
                 
-            }else{
-                $http->redirectTo("/");
+            } else {
+                $paints->removePaintById($id);
+                $flashBag->add($paint["Name"]." à était supprimé");
+                $http->redirectTo("/admin");
             }  
-        }else{
+        } else {
             $http->redirectTo("/");
         }   
        

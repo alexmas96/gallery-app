@@ -16,6 +16,7 @@ body{
     box-sizing: border-box;
     height: auto;
     background-repeat: no-repeat;
+    background-color: #2c2f33;
 }
 body::-webkit-scrollbar{
     display: block;
@@ -46,10 +47,10 @@ img{
     box-shadow: 0px 0px 43px -7px rgba(0,0,0,0.78);
 }
 .flashbag{
-    text-transform: capitalize;
+    text-transform: lowercase;
     position: absolute;
     top:50vh;
-    color: limegreen;
+    color: rgb(5, 165, 58);
     background-color: rgba(0, 0, 0, 0.616);
     width: 100%;
     padding: 1rem;

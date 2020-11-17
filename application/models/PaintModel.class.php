@@ -65,15 +65,15 @@ class PaintModel extends AbstractModel
     
     public function addPaintToDb($photo){
         $fields = array(
-            $_POST["name"],
-            $_POST["desc"],
+            filter_var($_POST["name"], FILTER_SANITIZE_STRING),
+            filter_var($_POST["desc"], FILTER_SANITIZE_STRING),
             $photo,
-            $_POST["category"],
-            $_POST["theme"],
-            $_POST["width"],
-            $_POST["height"],
-            $_POST["availability"]
-        );
+            filter_var($_POST["category"], FILTER_SANITIZE_NUMBER_INT),
+            filter_var($_POST["theme"], FILTER_SANITIZE_NUMBER_INT),
+            filter_var($_POST["width"], FILTER_SANITIZE_NUMBER_INT),
+            filter_var($_POST["height"], FILTER_SANITIZE_NUMBER_INT),
+            filter_var($_POST["availability"], FILTER_SANITIZE_NUMBER_INT),
+        );   
         
         $request = 'INSERT INTO paints (paints.Name, paints.Description, paints.Photo, paints.Category_Id, paints.Theme_Id, paints.Width, paints.Height, paints.Availability) VALUES (?,?,?,?,?,?,?,?); ';
         
@@ -83,13 +83,13 @@ class PaintModel extends AbstractModel
 
     public function update($id){
         $fields = array(
-            $_POST["name"],
-            $_POST["desc"],
-            $_POST["category"],
-            $_POST["theme"],
-            $_POST["width"],
-            $_POST["height"],
-            $_POST["availability"],
+            filter_var($_POST["name"], FILTER_SANITIZE_STRING),
+            filter_var($_POST["desc"], FILTER_SANITIZE_STRING),
+            filter_var($_POST["category"], FILTER_SANITIZE_NUMBER_INT),
+            filter_var($_POST["theme"], FILTER_SANITIZE_NUMBER_INT),
+            filter_var($_POST["width"], FILTER_SANITIZE_NUMBER_INT),
+            filter_var($_POST["height"], FILTER_SANITIZE_NUMBER_INT),
+            filter_var($_POST["availability"], FILTER_SANITIZE_NUMBER_INT),
             $id,
         );
         $request = 'UPDATE paints 

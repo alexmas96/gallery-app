@@ -1,11 +1,11 @@
 .header {
   height: 50vh;
   background-image: linear-gradient(
-      to bottom right,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
+      to top right,
+      rgba(#ff0000a2, 0.8),
+      rgba(#fffb009c, 0.8)
     ),
-    url(../img/hero.jpg);
+    url("../images/bg2.jpg");
   background-size: cover;
   background-position: center;
   display: grid;

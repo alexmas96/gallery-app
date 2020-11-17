@@ -34,7 +34,7 @@ section.home{
     margin: 12rem 0;
     @include for(phone-only){
         margin: 4rem;
-      }
+    }
     .theme:first-child{
         border:none;
         
@@ -43,7 +43,7 @@ section.home{
         border-left: 5px solid orangered; 
         @include for(phone-only){
             border:none;
-          }
+        }
         .theme-icon{
             font-size: 4rem;
         }
@@ -60,4 +60,10 @@ section.home{
         font-size: 3rem;
     }
 }
+.latest-painting{
+    width: 80%;
+    height: auto;
+    margin: none;
+}
+
 

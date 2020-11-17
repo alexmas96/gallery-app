@@ -1,0 +1,25 @@
+ul{
+  list-style: none;
+}
+footer{
+  background-color: rgb(7, 7, 7);
+  padding-top: 60px;
+  
+}
+.footer{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.socialMedia-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 12rem;
+  font-size: 35px;
+}
+
+.mentions{
+  text-align: center;
+}

@@ -9,7 +9,7 @@
 
 <!-- Premiere section de presentation -->
 <section class="home section-presentation row">
-    <article class="col-md-6 section-presentation-content ">
+    <article class="col-md-6 section-presentation-content text-center">
         <h2 class="heading-primary">Bienvenue !</h2>
         <p class="heading-primary--sub">Je vous présente mon travail artistique qui s’articule autour du dessin et de la peinture. </p>
         <p>Mon travail est intuitif et spontané, je recherche l’harmonie dans les formes, dans la matière, dans les couleurs pour aboutir à une émotion, un ressenti… à une poésie visuelle… la mienne.</p>
@@ -36,16 +36,16 @@
             <p class="favorite-themes__text">Fleurs</p>
         </div>
         <div class="col-md-3 theme">
-        <p class=""><span class="material-icons theme-icon">landscape</span></p>
-        <p class="favorite-themes__text">Paysages</p>
-        </div>
-        <div class="col-md-3 theme ">
-        <p class=""><span class="material-icons theme-icon">portrait</span></p>
-        <p class="favorite-themes__text">Portrait</p>
+            <p><i class="material-icons theme-icon">landscape</i></p>
+            <p class="favorite-themes__text">Paysages</p>
         </div>
         <div class="col-md-3 theme">
-        <p class=""><span class="material-icons theme-icon">location_city</span></p>
-        <p class="favorite-themes__text">Architecture</p>
+            <p><i class="material-icons theme-icon">portrait</i></p>
+            <p class="favorite-themes__text">Portrait</p>
+        </div>
+        <div class="col-md-3 theme">
+            <p><i class="material-icons theme-icon">location_city</i></p>
+            <p class="favorite-themes__text">Architecture</p>
         </div>
     </article>
 </section>
@@ -54,7 +54,7 @@
         <h2 class="heading-primary my-5"> dernière création</h2>  
         <?php foreach($LatestPaint as $key => $paint): ?>
         <!-- recuperation de la derniere image ajouté au serveur -->
-            <a href="<?=$requestUrl?>/showpaint?id=<?= $paint["Id"] ?>#<?= $paint["Name"] ?>" class="col"><img src="<?=$wwwUrl?>/images/paints/<?= $paint["Photo"]?>" style="width: 80%; height: auto; margin: none;" alt="three-latest-paint"></a>
+            <a href="<?=$requestUrl?>/showpaint?id=<?= $paint["Id"] ?>#<?= $paint["Name"] ?>" class="col"><img src="<?=$wwwUrl?>/images/paints/<?= $paint["Photo"]?>" class="latest-painting" alt="three-latest-paint"></a>
         <?php endforeach ?>
     </article>
     <article class="col-md-6 col-sm-12 p-5">
